@@ -415,7 +415,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -459,7 +459,7 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 275
+#define HEATER_0_MAXTEMP 300 // TODO: 285
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -494,9 +494,9 @@
     #define DEFAULT_Ki_LIST {   2.25,   2.25 }
     #define DEFAULT_Kd_LIST {  92.34,  92.34 }
   #else
-    #define DEFAULT_Kp  28.81
-    #define DEFAULT_Ki   2.25
-    #define DEFAULT_Kd  92.34
+    #define DEFAULT_Kp  26.34
+    #define DEFAULT_Ki   2.47
+    #define DEFAULT_Kd  70.36
   #endif
 #endif // PIDTEMP
 
